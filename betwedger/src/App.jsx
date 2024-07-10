@@ -69,13 +69,31 @@ function App() {
       </section>
       <section id="games">
         <Container maxWidth="lg">
+          <Typography
+            variant="h3"
+            textAlign="center"
+            fontSize={{
+              xs: "1rem", // 1.5rem font size on extra-small screens
+              sm: "1.5rem", // 2rem font size on small screens
+              md: "1.5rem", // 2.5rem font size on medium screens
+              lg: "2rem", // 3rem font size on large screens
+              xl: "2.5rem",
+            }}
+            fontWeight={700}
+            color="inherit"
+            textDecoration="none"
+            marginTop={4}
+
+          >
+            Check Out Our Upcoming Games!
+          </Typography>
           <Grid
             container
             rowSpacing={3}
             spacing={8}
             marginTop={2}
-            sx={{ textAlign: "start"}}
-            display={{ xs: "flex", sm: "flex", md: "flex", lg: "flex"}}
+            sx={{ textAlign: "start" }}
+            display={{ xs: "flex", sm: "flex", md: "flex", lg: "flex" }}
             direction="row"
             justifyContent="center"
             alignItems="center"
@@ -103,7 +121,7 @@ function App() {
               </Card>
             </Grid>
             <Grid item>
-            <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -125,7 +143,7 @@ function App() {
               </Card>
             </Grid>
             <Grid item>
-            <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -147,7 +165,7 @@ function App() {
               </Card>
             </Grid>
             <Grid item>
-            <Card sx={{ maxWidth: 345 }}>
+              <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
