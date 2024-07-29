@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Typography, IconButton, Grid, Link } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Footer = () => {
   return (
@@ -41,14 +42,23 @@ const Footer = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={4} textAlign="center">
-            <Link>
-              {" "}
-              <RouterLink
-                to="/aboutus"
-                style={{ color: "inherit", margin: "0 8px" }}
-              >
-                About Us
-              </RouterLink>
+            <Link
+              component={RouterLink}
+              to="/aboutus"
+              style={{ color: "inherit", margin: "0 8px" }}
+            >
+              About Us
+            </Link>
+            <Link
+              href="mailto:team@betwager.org"
+              style={{ color: "inherit", margin: "0 8px" }}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "mailto:team@betwager.org";
+              }}
+            >
+              <EmailIcon sx={{ verticalAlign: 'middle', mr: 0.5 }} />
+              team@betwager.org
             </Link>
           </Grid>
         </Grid>
